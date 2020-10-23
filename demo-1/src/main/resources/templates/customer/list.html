@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- <% %>랑 같은 느낌 -->
+	<p th:text="'hello' + ${name} + '!'" />
+	<table>
+		<tr>
+			<th>NO</th>
+			<th>NAME</th>
+			<th>PHONE</th>
+		</tr>
+		<tr th:each="cust : ${list}">
+			<td th:text="${cust.no}"></td>
+			<td th:text="${cust.name}"></td>
+			<td th:text="${cust.phone}"></td>
+		</tr>
+	</table>
+</body>
+</html>
